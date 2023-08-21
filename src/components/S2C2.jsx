@@ -67,17 +67,8 @@ const open2=Boolean(anchorE2);
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-      >
-        <FormControlLabel
-      label="Customer Service"
-      control={
-         <Checkbox
-          checked={checked[0] && checked[1]}
-          indeterminate={checked[0] !== checked[1]}
-          onChange={(event)=>{setChecked([event.target.checked, event.target.checked])}}
-        />
-      }
-    />
+      >Customer Service
+       
       </Button>
       <Menu sx={{top:10}}
         id="basic-menu"
@@ -87,7 +78,17 @@ const open2=Boolean(anchorE2);
         MenuListProps={{
           'aria-labelledby': 'basic-button',
         }}
-      >   
+      > 
+         <FormControlLabel
+      label="Customer Service"
+      control={
+         <Checkbox
+          checked={checked[0] && checked[1]}
+          indeterminate={checked[0] !== checked[1]}
+          onChange={(event)=>{setChecked([event.target.checked, event.target.checked])}}
+        />
+      }
+    />
  {children}
     </Menu>
     </div>
@@ -98,17 +99,7 @@ const open2=Boolean(anchorE2);
         aria-haspopup="true"
         aria-expanded={open2 ? 'true' : undefined}
         onClick={(e)=>{ setAnchorE2(e.currentTarget);}}
-      >
-         <FormControlLabel
-        label="Design"
-        control={
-          <Checkbox
-            checked={checked3[0] && checked3[1] && checked3[2]}
-            indeterminate={checked3[0] !== checked3[1] || checked3[0] !==checked3[2] || checked3[1] !==checked3[2]}
-            onChange={(event)=>{setChecked3([event.target.checked, event.target.checked,event.target.checked])}}
-          />
-        }
-      />
+      >Design
       
          </Button>
       <Menu sx={{top:30}}
@@ -120,6 +111,16 @@ const open2=Boolean(anchorE2);
           'aria-labelledby': 'basic-button2',
         }}
       > 
+        <FormControlLabel
+        label="Design"
+        control={
+          <Checkbox
+            checked={checked3[0] && checked3[1] && checked3[2]}
+            indeterminate={checked3[0] !== checked3[1] || checked3[0] !==checked3[2] || checked3[1] !==checked3[2]}
+            onChange={(event)=>{setChecked3([event.target.checked, event.target.checked,event.target.checked])}}
+          />
+        }
+      />
      {children2}
       </Menu>
       
